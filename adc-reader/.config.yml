@@ -1,0 +1,19 @@
+---
+:modules:
+- adc
+- uart
+- uart_stdio
+- gpio
+:headers:
+- ./init.h
+- adc.h
+- uart.h
+- uart_stdio.h
+- gpio.h
+:sources:
+- ./init.c
+- main.c
+- lib/adc/adc.c
+- lib/uart/uart.c
+- lib/uart_stdio/uart_stdio.c
+- lib/gpio/gpio.c
