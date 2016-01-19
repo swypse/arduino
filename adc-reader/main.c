@@ -21,7 +21,7 @@ int main() {
 		//printf("%d", adc_read(0));
 		buf[0] = adc_read(0);
 		uart_write(buf, 1);
-		_delay_ms(100);
+		_delay_ms(666);
 	}
 	return 0;
 }
