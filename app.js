@@ -1,4 +1,4 @@
-﻿var app = angular.module("app", ["chart.js"]);
+var app = angular.module("app", ["chart.js"]);
 
 app.config(function (ChartJsProvider) {
 	ChartJsProvider.setOptions({
@@ -39,8 +39,11 @@ app.service("dataService", function ($http, $timeout) {
 	dataService.data[0].fill(0, 0, 20);
 	dataService.labels.fill("", 0, 20);
 
+	//server = "http://192.168.0.8:3000/"
+	server = "http://localhost:3000/"
+
 	function get() {
-		$http.get("http://192.168.0.8:3000/").then(function (data) {
+		$http.get(server).then(function (data) {
 			var l = dataService.labels,
 				d = dataService.data[0];
 			l.push("");
@@ -54,9 +57,6 @@ app.service("dataService", function ($http, $timeout) {
 
 	return dataService;
 });
-
-
-
 
 
 
